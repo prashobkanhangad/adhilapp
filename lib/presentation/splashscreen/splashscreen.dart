@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:adil_project/core/core.dart';
 import 'package:adil_project/presentation/loginscreen/loginscreen.dart';
+import 'package:adil_project/presentation/navigationbar/navigationbar.dart';
 import 'package:flutter/material.dart';
 
 class SpashScreen extends StatelessWidget {
@@ -22,7 +23,8 @@ class SpashScreen extends StatelessWidget {
   Future<void> gotoLogin(context) async {
     await Future.delayed(Duration(seconds: 3));
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) => LoginScreen(),
+      builder: (context) => BottomnavScreen(selectedindex: 3)
+      //  LoginScreen(),
     ));
   }
 }

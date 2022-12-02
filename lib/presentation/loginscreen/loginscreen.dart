@@ -1,4 +1,6 @@
 import 'package:adil_project/core/core.dart';
+import 'package:adil_project/presentation/homescreen/homescreen.dart';
+import 'package:adil_project/presentation/navigationbar/navigationbar.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -21,7 +23,7 @@ class LoginScreen extends StatelessWidget {
         color: kprimarycolor,
         child: Column(
           children: [
-            Spacer(),
+            const Spacer(),
             Container(
               // height: screenheight / 2,
               width: screenwidth,
@@ -46,7 +48,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       heigh10,
                       TextFormField(
-                        style: TextStyle(fontSize: 20),
+                        style: const TextStyle(fontSize: 20),
                         autofocus: false,
                         controller: emailcontroller,
                         keyboardType: TextInputType.phone,
@@ -78,7 +80,8 @@ class LoginScreen extends StatelessWidget {
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5)),
                           hintText: 'Mobile Number',
-                          hintStyle: const TextStyle(fontSize: 17, color: kgreycolor),
+                          hintStyle:
+                              const TextStyle(fontSize: 17, color: kgreycolor),
                         ),
                       ),
                       heigh20,
@@ -89,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       heigh10,
                       TextFormField(
-                        style: TextStyle(fontSize: 20),
+                        style: const TextStyle(fontSize: 20),
                         autofocus: false,
                         obscureText: true,
                         controller: passwordcontroller,
@@ -112,8 +115,8 @@ class LoginScreen extends StatelessWidget {
                               horizontal: 10.0,
                             ),
                             prefixIcon:
-                                Icon(Icons.vpn_key, color: kprimarycolor),
-                            suffixIcon: Icon(
+                                const Icon(Icons.vpn_key, color: kprimarycolor),
+                            suffixIcon: const Icon(
                               Icons.remove_red_eye,
                               color: kblackcolor,
                             ),
@@ -123,22 +126,29 @@ class LoginScreen extends StatelessWidget {
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(5)),
                             hintText: 'Password',
-                            hintStyle: const TextStyle(fontSize: 17, color: kgreycolor)),
+                            hintStyle: const TextStyle(
+                                fontSize: 17, color: kgreycolor)),
                       ),
                       TextButton(
                           onPressed: () {},
                           child: const Text(
                             'Forgot Password ?',
-                            style: TextStyle(fontSize: 16, color: kblackcolor, ),
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: kblackcolor,
+                            ),
                           )),
                       SizedBox(
                         width: double.maxFinite,
                         height: 55,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {      Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) =>  BottomnavScreen(selectedindex: 3,)));},
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(kyellowcolor),
-                            foregroundColor: MaterialStateProperty.all<Color>(kblackcolor),
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(kyellowcolor),
+                            foregroundColor:
+                                MaterialStateProperty.all<Color>(kblackcolor),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(
@@ -146,14 +156,14 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          child: const Text(
-                            'Login',
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
+                          child:  const Text('Login',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold)),
                           ),
-                        ),
+                        
                       ),
-                     heigh20,heigh10
+                      heigh20,
+                      heigh10
                     ],
                   ),
                 ),

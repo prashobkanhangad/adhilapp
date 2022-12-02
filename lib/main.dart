@@ -16,13 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-
-     
-       fontFamily: GoogleFonts.nunitoSans().fontFamily,
-       scaffoldBackgroundColor: kprimarycolor
-      ),
-      
+          primarySwatch: Colors.blue,
+          fontFamily: GoogleFonts.nunitoSans().fontFamily,
+          scaffoldBackgroundColor: kashcolor),
       home: const SpashScreen(),
     );
   }

@@ -9,6 +9,7 @@ const kgreycolor =Color.fromARGB(255, 158, 158, 158);
 const kashcolor =Color.fromARGB(255, 233, 233, 233);
 
 
+
 // color ends here
 const heigh10 = SizedBox(height: 10);
 const heigh20 = SizedBox(height: 20);
