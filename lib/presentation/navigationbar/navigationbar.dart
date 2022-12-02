@@ -1,5 +1,6 @@
 import 'package:adil_project/core/core.dart';
 import 'package:adil_project/presentation/homescreen/homescreen.dart';
+import 'package:adil_project/presentation/orderscreen/orderscren.dart';
 import 'package:adil_project/presentation/profile/profilescreen.dart';
 import 'package:adil_project/presentation/track/trackscreen.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
@@ -28,7 +29,7 @@ class _BottomNavState extends State<BottomnavScreen> {
 
   final pages = [
     const HomeScreen(),
-    const HomeScreen(),
+    const OrderScreen(),
      TrackScreen(),
     const ProfileScreen(),
   ];

@@ -23,7 +23,7 @@ class SpashScreen extends StatelessWidget {
   Future<void> gotoLogin(context) async {
     await Future.delayed(Duration(seconds: 3));
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) => BottomnavScreen(selectedindex: 3)
+      builder: (context) => BottomnavScreen(selectedindex: 1)
       //  LoginScreen(),
     ));
   }
